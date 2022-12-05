@@ -1,0 +1,7 @@
+For two given text files, the first is considered as the original file, and the second is the test file.
+
+The first step is to determine if the given text is in English or is source code in C++, Java, or Python. Then the algorithm determines what percentage of content of the second file is similar to the content of the first file. 
+
+This is done by tokenizing the second file and removing symbols, repetitions, as well as words that are commonly used in English or source code as these stop-words typically do not indicate plagiarism. The remaining words form a set of unique words from the second file, wherein each word is significant to the overall meaning of the text. Then the algorithm checks if each token in the unique set of tokens of the second file exists in the second file. If a match exists, the algorithm increments the match counter. The ratio between the number of matches and the number of unique tokens in the second file indicates the similarity between both files.
+
+To determine plagiarism, the algorithm uses different threshold values for plagiarism for regular English content as well as source code. If the similarity index exceeds the threshold, the algorithm announces that the second text is plagiarized.
